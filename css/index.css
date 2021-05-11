@@ -1,0 +1,1792 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lora',serif;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+
+header{
+    background-color: rgb(255, 130, 130);
+    padding:2rem 0;
+}
+#header-dropdown-body{
+    display: none;
+    background-color: rgb(255, 130, 130);
+    position: absolute;
+    right: 0;
+    top: 3.5rem;
+    flex-direction: column;
+    z-index: 1;
+    width: max-content;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#header-dropdown-body p a{
+    text-decoration: none ;
+    color: black ;
+}
+
+#header-dropdown-body p{
+    text-align: center;
+    margin: 1rem 1.5rem;
+    font-size: 0.85rem;
+}
+#header-dropdown-button{
+    width: 30vw;
+    position: relative;
+    text-align: end;
+}
+#header-dropdown-button:hover{
+    cursor: pointer;
+}
+
+.top-bar{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-container{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-right: 2rem;
+}
+.logo-container img{
+    width:8rem;
+}
+.sub-header{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+.sub-header img{
+    width: 14rem;
+}
+
+.nav{
+    flex-grow: 8;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    list-style: none;
+}
+.nav-options{
+    font-size: 0.9rem;
+    text-decoration: none;
+    color:black;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: white;
+    padding:0.5rem 2rem;
+    margin-left: 2vw;
+    font-family: 'Ubuntu',sans-serif;
+}
+.nav-options:hover{
+    border-color: black;
+}
+.nav-options:active{
+    background-color: rgb(253, 105, 105);
+    color: white;
+    border-color:transparent;
+}
+
+
+#blog-month{
+    position: relative;
+    width: 70%;
+    margin: 4.5rem auto 0;
+    padding-top: 3rem;
+}
+.title-block{
+    position: absolute;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: rgb(255, 130, 130);
+    width: fit-content;
+    word-spacing: 6px;
+    padding:2rem;
+    letter-spacing: 4px;
+    left: 0;
+    top: 0;
+}
+.title-block p{
+    font-family: 'Ubuntu',sans-serif;
+}
+.blog-post{
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: thin;
+    object-fit: cover;
+}
+
+.blog-date-author{
+    margin: 0.8rem 0;
+    display: flex;
+    opacity: 0.6;
+}
+.blog-date-author p{
+    padding-left: 2vw;
+}
+.blog-title{
+    padding: 0 2vw 0;
+    font-weight: 800;
+    font-size: 1.7rem;
+}
+.blog-title p{
+    font-family: 'Ubuntu',sans-serif;
+}
+.blog-desc{
+    margin-top: 1rem;
+    padding: 0 2vw 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+.blog-foot p{
+    opacity: 0.6;
+    padding: 0.9rem 2vw;
+}
+
+
+#picture-month{
+    width: 70%;
+    margin:4.5rem auto 0;
+    position: relative;
+    padding-top: 3rem;
+}
+#picture-month-body{
+    padding-top: 6rem;
+    background-color: white;
+    padding-bottom: 3rem;
+}
+#picture-month-carousel-container{
+    position: relative;
+    margin:0 auto;
+    overflow-x: hidden;
+    width: 40vw;
+}
+#picture-month-carousel-container i:nth-child(1){
+    position: absolute;
+    left: 0;
+    top: 43%;
+    font-size: 3rem;
+    z-index: 1;
+    color: white;
+    text-shadow: 0 0 3px black;
+}
+#picture-month-carousel-container i:nth-child(2){
+    position: absolute;
+    right: 0;
+    top: 43%;
+    font-size: 3rem;
+    z-index: 1;
+    color: white;
+    text-shadow: 0 0 3px black;
+}
+#picture-month-carousel-container i:nth-child(1):hover{
+    cursor: pointer;
+}
+#picture-month-carousel-container i:nth-child(2):hover{
+    cursor: pointer;
+}
+#picture-month-carousel{
+    transition-property: all;
+    transition-duration: 1s;
+    display: flex;
+}
+#picture-month-carousel img{
+    flex-shrink: 0;
+    width: 40vw;
+    height: 23rem;
+    object-fit: cover;
+}
+#picture-month-body p{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+
+#quote-month{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 5rem auto 0;
+}
+#quote-month-header-bg{
+    background-color: rgb(255, 130, 130);
+    width: fit-content;
+    padding:1rem 1rem 0 1rem;
+}
+#quote-month-header-fg{
+    background-color: white;
+    text-align: center;
+    padding:1.4rem;
+}
+#quote-month-header-fg p{
+    font-weight: bolder;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    word-spacing: 6px;
+    font-family: 'Ubuntu',sans-serif;
+}
+#quote-month-body{
+    display: flex;
+}
+#quote-month-body div{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+#quote-month-body div i{
+    align-self: center;
+    margin: 5rem 0;
+    font-size: 3rem;
+}
+.quote-card-title{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: 'Ubuntu',sans-serif;
+}
+.quote-card-desc{
+    text-align: center;
+    margin: 0 1rem 2.5rem;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    line-height: 1.25rem;
+}
+
+
+#reach-us{
+    width: 80%;
+    margin:3rem auto 2rem;
+}
+#reach-title p{
+    font-family: 'Ubuntu',sans-serif;
+    text-align: center;
+    font-style: italic;
+    font-weight: bolder;
+}
+#reach-title p:first-child{
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+#reach-title p:last-child{
+    font-size: 1.4rem;
+}
+#reach-sub-title{
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+#reach-body{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+#reach-body-desc{
+    width:80vw;
+    margin-right: 4vw;
+    line-height: 32px;
+}
+#reach-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#reach-form input{
+    border-color: rgb(255, 130, 130);
+    border-width: 0.2rem;
+    padding: 0.4rem 1.5rem;
+    border-style: solid;
+}
+#reach-form input:nth-child(2){
+    margin-top: 0.4rem;
+}
+#reach-form textarea{
+    resize: none;
+    margin-top: 0.4rem;
+    border-color: rgb(255, 130, 130);
+    border-width: 0.2rem;
+    padding:0.4rem 1.5rem ;
+    margin-bottom: 0.5rem;
+    height: 6rem;
+}
+#reach-form button{
+    width: fit-content;
+    padding: 0.6rem;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 2px;
+    color: white;
+    background-color: rgb(255, 85, 85);
+    align-self: flex-end;
+    transition-property: all;
+    transition-duration: 500ms;
+}
+#reach-form button:hover{
+    background-color: white;
+    color: rgb(255, 85, 85);
+    border-color: rgb(255, 85, 85);
+    cursor: pointer;
+}
+
+#wrong-and-about{
+    display: flex;
+}
+#about{
+    background-color: white;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+}
+#about-creator p:first-child{
+    font-family: 'Ubuntu',sans-serif;
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+}
+#about-creator img{
+    width:20vw;
+    margin: 0 7.5vw;
+    border: 2px solid black;
+    object-fit: cover;
+}
+#about-creator p:last-child{
+    text-align: center;
+    margin: 2rem 7.5vw;
+    opacity: 0.85;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+#about-instagram p:nth-child(1){
+    font-family: 'Ubuntu',sans-serif;
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
+}
+#about-instagram p:nth-child(2){
+    text-align: center;
+    font-size: 0.95rem;
+    margin: 0.2rem;
+    opacity: 0.6;
+}
+#about-instagram p:nth-child(3){
+    text-align: center;
+    margin: 0.8rem 5vw;
+    line-height: 24px;
+    letter-spacing: 1px;
+    opacity: 0.85;
+}
+#about-instagram i{
+    text-decoration: none;
+    color: rgb(255, 112, 141);
+    font-size:52px;
+    width: 100%;
+    text-align: center;
+}
+#about-instagram p:nth-child(5){
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 0.4rem;
+}
+
+#blog-week p:first-child{
+    font-family: 'Ubuntu',sans-serif;
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 0.8rem;
+}
+#blog-week img{
+    width: 20vw;
+    margin: 0.3rem 7.5vw;
+    object-fit: cover;
+}
+#blog-week p:last-of-type{
+    text-align: center;
+    opacity: 0.85;
+    margin:0.8rem 5vw;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+#blog-week div button{
+    padding:0.8rem 1.5rem;
+    border-radius: 20px;
+    border-style: hidden;
+    background-color: rgb(255, 130, 130);
+    color: white;
+    margin-bottom: 0.8rem;
+}
+#blog-week div button:hover{
+    transition-property: "color";
+    transition-property: "background-color";
+    transition-duration: 500ms;
+    color: white;
+    background-color: rgb(37, 37, 37);
+}
+
+#book-month p:first-child{
+    font-family: 'Ubuntu',sans-serif;
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 0.8rem;
+}
+#book-month img{
+    width: 20vw;
+    margin: 0.4rem 7.5vw;
+    object-fit: cover;
+}
+#book-month p:last-of-type{
+    text-align: center;
+    opacity: 0.85;
+    margin:0.8rem 5vw;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+#book-month div button{
+    padding:0.8rem 1.5rem;
+    border-radius: 20px;
+    border-style: hidden;
+    background-color: rgb(255, 130, 130);
+    color: white;
+    margin-bottom: 0.8rem;
+}
+#book-month div button:hover{
+    transition-property: "color";
+    transition-property: "background-color";
+    transition-duration: 500ms;
+    color: white;
+    background-color: rgb(37, 37, 37);
+}
+
+
+#written-wrong{
+    background-color: rgb(255, 85, 85);
+    width:65vw;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid rgba(37, 37, 37, 0.76);
+    padding-bottom: 1rem;
+}
+#written-wrong p:first-child{
+    font-family: 'Ubuntu',sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-style: oblique;
+}
+
+.mini-blog{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 3rem auto 1rem;
+    width: 80%;
+    border: 1px solid black;
+}
+
+.mini-blog img{
+    width: 250px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.mini-blog-body p:nth-child(1){
+    text-align: start !important;
+    font-style: normal !important;
+    font-size: 0.85rem !important;
+    letter-spacing: normal !important;
+    margin: 0.6rem 1rem 0rem !important;
+    opacity: 0.7;
+}
+.mini-blog-body p:nth-child(2){
+    margin: 0rem 1rem 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+.mini-blog-body p:nth-child(3){
+    font-family: 'Ubuntu',sans-serif;
+    margin: 1rem 1rem 0.5rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.mini-blog-body p:nth-child(4){
+    margin: 0 1rem 0rem;
+    opacity: 0.85;
+    font-style: oblique;
+}
+.mini-blog-body hr{
+    margin:0 1rem;
+    width: 50%;
+    position: absolute;
+    bottom: 2rem;
+}
+.mini-blog-body p:nth-child(6){
+    position: absolute;
+    bottom: 0rem;
+    margin: 0.5rem 1rem;
+    opacity: 0.75;
+    font-size: 0.8rem;
+}
+#written-wrong button{
+    width: fit-content;
+    margin: auto auto;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    border-style: hidden;
+    color:rgb(255, 50, 50);
+    background-color: white;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+#written-wrong button:hover{
+    transition-property: "color";
+    transition-property: "background-color";
+    transition-duration: 500ms;
+    color: white;
+    background-color: rgb(37, 37, 37);
+}
+
+#photo-gallery{
+    margin: 4rem 0 3rem;
+}
+#photo-gallery p:nth-child(1){
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+#photo-gallery p:nth-child(2){
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 1.6rem;
+    opacity: 0.9;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+#photo-gallery p:last-child{
+    margin: 2rem 15vw 0;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#photo-gallery-body{
+    position: relative;
+    width: 80vw;
+    margin: 1rem 10vw;
+    overflow-x: hidden;
+}
+#photo-gallery-left{
+    left: 0;
+}
+#photo-gallery-right{
+    right: 0;
+}
+#photo-gallery-body i{
+    z-index: 1;
+    position: absolute;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+    font-size: 4rem;
+    margin-top: 10.5rem;
+    cursor: pointer;
+}
+#photo-gallery-carousel{
+    display: flex;
+    flex-direction: row;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.photo-gallery-column{
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+
+}
+.photo-gallery-column img{
+    margin: 0.1rem;
+    object-fit: cover;
+    background-color: black;
+}
+.photo-gallery-column img:hover{
+    filter: brightness(60%);
+}
+
+
+#photo-gallery-img-1{
+    height: 15rem;
+    width: 13rem;
+}
+#photo-gallery-img-2{
+    height: 10rem;
+    width: 13rem;
+}
+
+
+#photo-gallery-img-3{
+    height: 10rem;
+    width: 17rem;
+}
+#photo-gallery-img-4{
+    height: 15rem;
+    width: 17rem;
+}
+
+
+#photo-gallery-img-5{
+    height: 17rem;
+    width: 20rem;
+}
+#photo-gallery-img-6{
+    width: 8.8rem;
+    height: 8rem;
+}
+#photo-gallery-img-7{
+    width: 11rem;
+    height: 8rem;
+}
+
+
+#photo-gallery-img-8{
+    height: 8rem;
+    width: 11.7rem;
+}
+#photo-gallery-img-9{
+    height: 8rem;
+    width: 13.1rem;
+}
+#photo-gallery-img-10{
+    height: 17rem;
+    width: 25rem;
+}
+
+#photo-gallery-img-11{
+    width: 17rem;
+    height: 14rem;
+}
+#photo-gallery-img-12{
+    width: 17rem;
+    height: 11rem;
+}
+
+#photo-gallery-img-13{
+    width: 35rem;
+    height: 25.2rem;
+}
+
+@media only screen and (max-width:1120px) {
+    .logo-container{
+        justify-content: flex-end;
+        margin-right: 2rem;
+    }
+    .logo-container img{
+        width:7rem;
+    }
+    .sub-header{
+        justify-content: flex-start;
+        margin-left: 2rem;
+    }
+    .sub-header img{
+        width: 12rem;
+    }
+    .nav{
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .nav-options{
+        font-size: 0.8rem;
+        padding:0.4rem 1.9rem;
+    }
+
+
+    .title-block{
+        font-size: 1.1rem;
+        padding: 1.6rem;
+    }
+    #blog-month{
+        padding-top:2rem;
+        margin-top: 2.5rem;
+    }
+    .blog-date-author{
+        font-size: 0.9rem;
+    }
+    .blog-title{
+        font-size: 1.3rem;
+    }
+    .blog-desc{
+        font-size: 0.95rem;
+        margin-top: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    .blog-foot p{
+        padding:0.7rem 2vw;
+        font-size: 0.8rem;
+    }
+
+    #picture-month{
+        margin:4rem auto 0;
+        padding-top: 2rem;
+    }
+    #picture-month-body{
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+    #picture-month-carousel-container{
+        width: 50vw;
+    }
+    #picture-month-carousel-container i:nth-child(1){
+        font-size: 2.5rem;
+    }
+    #picture-month-carousel-container i:nth-child(2){
+        font-size: 2.5rem;
+    }
+    #picture-month-carousel img{
+        width: 50vw;
+        height: 20rem;
+    }
+    #picture-month-body p{
+        margin-top: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #quote-month{
+        margin-top: 4rem;
+    }
+    #quote-month-header-fg{
+        padding:1rem;
+    }
+    #quote-month-header-fg p{
+        font-size: 1.1rem;
+        letter-spacing: 3px;
+    }
+    #quote-month-body div i{
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .quote-card-title{
+        font-size: 0.95rem;
+    }
+    .quote-card-desc{
+        font-size: 0.7rem;
+    }
+
+    #reach-us{
+        margin:2rem auto 1rem;
+    }
+    #reach-title p:first-child{
+        font-size: 2rem;
+    }
+    #reach-title p:last-child{
+        font-size: 1rem;
+    }
+    #reach-sub-title{
+        font-size: 1.6rem;
+        margin-top: 0.75rem;
+    }
+    #reach-body{
+        margin-top: 1.4rem;
+        font-size: 0.85rem;
+    }
+    #reach-body-desc{
+        font-size: 0.85rem;
+        margin-right: 4vw;
+        line-height: 28px;
+    }
+
+    #reach-form input{
+        border-width: 0.15rem;
+        padding: 0.3rem 1.2rem;
+    }
+    #reach-form input:nth-child(2){
+        margin-top: 0.3rem;
+    }
+    #reach-form textarea{
+        margin-top: 0.3rem;
+        border-width: 0.15rem;
+        padding: 0.3rem 1.2rem;
+        margin-bottom: 0.4rem;
+        height: 5rem;
+    }
+    #reach-form button{
+        padding: 0.5rem;
+        border-width: 1px;
+    }
+
+    #about-creator p:first-child{
+        margin: 1rem 0;
+        font-size: 1.2rem;
+    }
+    #about-creator p:last-child{
+        margin: 1rem 7.5vw;
+        line-height: 21px;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+    }
+
+    #about-instagram p:nth-child(1){
+        margin-top: 0.3rem;
+        font-size: 1.2rem;
+    }
+    #about-instagram p:nth-child(2){
+        font-size: 0.85rem;
+        margin: 0.2rem;
+    }
+    #about-instagram p:nth-child(3){
+        margin: 0.65rem 5vw;
+        line-height: 21px;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+    }
+    #about-instagram i{
+        font-size:40px;
+    }
+    #about-instagram p:nth-child(5){
+        margin-bottom: 0.4rem;
+        font-size: 0.95rem;
+    }
+
+    #blog-week p:first-child{
+        font-size: 1.2rem;
+        margin: 0.5rem;
+    }
+    #blog-week p:last-of-type{
+        margin:0.65rem 5vw;
+        line-height: 21px;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+    }
+    #blog-week div button{
+        padding:0.5rem 1.2rem;
+        margin-bottom: 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    #book-month p:first-child{
+        font-size: 1.2rem;
+        margin: 0.5rem;
+    }
+    #book-month p:last-of-type{
+        margin:0.65rem 5vw;
+        line-height: 21px;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+    }
+    #book-month div button{
+        padding:0.5rem 1.2rem;
+        margin-bottom: 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    #written-wrong p:first-child{
+        margin-top: 1.4rem;
+        font-size: 1.4rem;
+        letter-spacing: 1.2px;
+    }
+    .mini-blog img{
+        width: 200px;
+        height: 230px;
+    }
+    .mini-blog div p:nth-child(1){
+        font-size: 0.7rem !important;
+        letter-spacing: normal !important;
+        margin: 0.4rem 1rem 0rem !important;
+        opacity: 0.7;
+    }
+    .mini-blog div p:nth-child(2){
+        margin: 0rem 1rem 0.2rem;
+        font-size: 0.65rem;
+    }
+    .mini-blog div p:nth-child(3){
+        margin: 0.4rem 1rem 0.3rem;
+        font-size: 1rem;
+    }
+    .mini-blog div p:nth-child(4){
+        margin: 0 1rem 2rem;
+        opacity: 0.85;
+        font-size: 0.85rem;
+    }
+    .mini-blog-body hr{
+        width: 45%;
+        bottom: 2rem;
+        margin:0 0.75rem;
+    }
+    .mini-blog div p:nth-child(6){
+        margin: 0.4rem 1rem;
+        font-size: 0.7rem;
+    }
+    #written-wrong button{
+        padding: 0.8rem 1.6rem;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+    }
+
+    #photo-gallery{
+        margin: 3rem 0 3rem;
+    }
+    #photo-gallery p:nth-child(1){
+        font-size: 1.7rem;
+    }
+    #photo-gallery p:nth-child(2){
+        font-size: 1.3rem;
+        margin-top: 0.4rem;
+    }
+    #photo-gallery p:last-child{
+        margin: 1.7rem 15vw 0;
+        font-size: 1.2rem;
+    }
+
+
+
+    #photo-gallery-body i{
+        font-size: 3.5rem;
+        margin-top: 9.5rem;
+    }
+
+
+    #photo-gallery-img-1{
+        height: 13rem;
+        width: 11rem;
+    }
+    #photo-gallery-img-2{
+        height: 8rem;
+        width: 11rem;
+    }
+
+    #photo-gallery-img-3{
+        height: 8rem;
+        width: 15rem;
+    }
+    #photo-gallery-img-4{
+        height: 13rem;
+        width: 15rem;
+    }
+
+    #photo-gallery-img-5{
+        height: 15rem;
+        width: 18rem;
+    }
+    #photo-gallery-img-6{
+        width: 7.8rem;
+        height: 6rem;
+    }
+    #photo-gallery-img-7{
+        width: 10rem;
+        height: 6rem;
+    }
+
+
+    #photo-gallery-img-8{
+        height: 6rem;
+        width: 10.7rem;
+    }
+    #photo-gallery-img-9{
+        height: 6rem;
+        width: 12.1rem;
+    }
+    #photo-gallery-img-10{
+        height: 15rem;
+        width: 23rem;
+    }
+
+    #photo-gallery-img-11{
+        width: 15rem;
+        height: 12rem;
+    }
+    #photo-gallery-img-12{
+        width: 15rem;
+        height: 9rem;
+    }
+
+    #photo-gallery-img-13{
+        width: 33rem;
+        height: 21.2rem;
+    }
+}
+@media only screen and (max-width:800px){
+    .logo-container{
+        justify-content: flex-end;
+        margin-right: 2rem;
+    }
+    .logo-container img{
+        width:6rem;
+    }
+    .sub-header{
+        justify-content: flex-start;
+        margin-left: 2rem;
+    }
+    .sub-header img{
+        width: 10rem;
+    }
+    .nav{
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .nav-options{
+        font-size: 0.65rem;
+        padding:0.3rem 1.25rem;
+        margin-left: 2rem;
+    }
+
+
+    .title-block{
+        font-size: 0.9rem;
+        padding: 1.2rem;
+        letter-spacing: 2px;
+        border-radius: 0 25px 0 25px;
+    }
+    #blog-month{
+        padding-top: 1.5rem;
+        margin-top: 2rem;
+    }
+    .blog-date-author{
+        font-size: 0.65rem;
+    }
+    .blog-title{
+        font-size: 1.1rem;
+    }
+    .blog-desc{
+        font-size: 0.75rem;
+        margin-top: 0.6rem;
+        margin-bottom: 0.8rem;
+    }
+    .blog-foot p{
+        padding:0.5rem 2vw;
+        font-size: 0.65rem;
+    }
+
+    #picture-month{
+        margin: 2.5rem auto 0;
+        padding-top: 1.75rem;
+    }
+    #picture-month-body{
+        padding-top: 3.5rem;
+        padding-bottom: 2rem;
+    }
+    #picture-month-carousel-container{
+        width: 50vw;
+    }
+    #picture-month-carousel-container i:nth-child(1){
+        font-size: 2.25rem;
+    }
+    #picture-month-carousel-container i:nth-child(2){
+        font-size: 2.25rem;
+    }
+    #picture-month-carousel img{
+        width: 50vw;
+        height: 14rem;
+    }
+    #picture-month-body p{
+        margin-top: 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    #quote-month{
+        margin-top: 2.5rem;
+    }
+    #quote-month-header-bg{
+        padding: 0.8rem 0.8rem 0;
+    }
+    #quote-month-header-fg{
+        padding: 0.8rem;
+    }
+    #quote-month-header-fg p{
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+    #quote-month-body div i{
+        font-size: 1.75rem;
+        margin: 2.5rem 0;
+    }
+    .quote-card-title{
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+    .quote-card-desc{
+        font-size: 0.6rem;
+        margin-bottom: 1.75rem;
+    }
+
+    #reach-us{
+        margin:1.5rem auto 1rem;
+    }
+    #reach-title p:first-child{
+        font-size: 1.65rem;
+    }
+    #reach-title p:last-child{
+        font-size: 0.8rem;
+    }
+    #reach-sub-title{
+        font-size: 1.3rem;
+        margin-top: 0.6rem;
+    }
+    #reach-body{
+        margin-top: 0.9rem;
+        font-size: 0.65rem;
+    }
+    #reach-body-desc{
+        font-size: 0.65rem;
+        margin-right: 4vw;
+        line-height: 20px;
+    }
+
+    #reach-form input{
+        border-width: 0.15rem;
+        padding: 0.3rem 1rem;
+        font-size: 0.7rem;
+    }
+    #reach-form input:nth-child(2){
+        margin-top: 0.3rem;
+    }
+    #reach-form textarea{
+        margin-top: 0.3rem;
+        border-width: 0.15rem;
+        padding: 0.3rem 1rem;
+        margin-bottom: 0.4rem;
+        height: 4.5rem;
+        font-size: 0.7rem;
+    }
+    #reach-form button{
+        padding: 0.5rem;
+        border-width: 1px;
+        font-size: 0.5rem;
+    }
+
+    #about-creator p:first-child{
+        margin: 0.85rem 0;
+        font-size: 1rem;
+    }
+    #about-creator p:last-child{
+        margin: 1rem 7.5vw;
+        line-height: 16px;
+        letter-spacing: 1px;
+        font-size: 0.6rem;
+    }
+
+    #about-instagram p:nth-child(1){
+        margin-top: 0.3rem;
+        font-size: 1rem;
+    }
+    #about-instagram p:nth-child(2){
+        font-size: 0.7rem;
+        margin: 0.1rem;
+    }
+    #about-instagram p:nth-child(3){
+        margin: 0.4rem 5vw;
+        line-height: 16px;
+        letter-spacing: 1px;
+        font-size: 0.6rem;
+    }
+    #about-instagram i{
+        font-size: 26px;
+    }
+    #about-instagram p:nth-child(5){
+        margin-bottom: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    #blog-week p:first-child{
+        font-size: 1rem;
+        margin: 0.4rem;
+    }
+    #blog-week p:last-of-type{
+        margin:0.4rem 5vw;
+        line-height: 16px;
+        letter-spacing: 1px;
+        font-size: 0.6rem;
+    }
+    #blog-week div button{
+        padding:0.4rem 0.9rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.6rem;
+    }
+
+    #book-month p:first-child{
+        font-size: 1rem;
+        margin: 0.4rem;
+    }
+    #book-month p:last-of-type{
+        margin:0.4rem 5vw;
+        line-height: 16px;
+        letter-spacing: 1px;
+        font-size: 0.6rem;
+    }
+    #book-month div button{
+        padding:0.4rem 0.9rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.6rem;
+    }
+
+    #written-wrong p:first-child{
+        margin-top: 1.2rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    .mini-blog img{
+        width: 150px;
+        height: 180px;
+    }
+    .mini-blog{
+        margin: 2rem auto 1.5rem;
+    }
+    .mini-blog div p:nth-child(1){
+        font-size: 0.55rem !important;
+        letter-spacing: normal !important;
+        margin: 0.4rem 1rem 0rem !important;
+        opacity: 0.7;
+    }
+    .mini-blog div p:nth-child(2){
+        margin: 0rem 1rem 0.2rem;
+        font-size: 0.5rem;
+    }
+    .mini-blog div p:nth-child(3){
+        margin: 0.3rem 1rem 0.3rem;
+        font-size: 0.8rem;
+    }
+    .mini-blog div p:nth-child(4){
+        margin: 0 1rem 1rem;
+        opacity: 0.85;
+        font-size: 0.55rem;
+    }
+    .mini-blog-body hr{
+        bottom: 1.5rem;
+        margin:0 0.75rem;
+    }
+    .mini-blog div p:nth-child(6){
+        margin: 0.45rem 1rem ;
+        font-size: 0.5rem;
+    }
+    #written-wrong button{
+        padding: 0.4rem 1rem;
+        border-radius: 30px;
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+
+    #photo-gallery{
+        margin: 2rem 0;
+    }
+    #photo-gallery p:nth-child(1){
+        font-size: 1.5rem;
+    }
+    #photo-gallery p:nth-child(2){
+        font-size: 1.1rem;
+        margin-top: 0.3rem;
+    }
+    #photo-gallery p:last-child{
+        margin: 1.5rem 15vw 0;
+        font-size: 1rem;
+    }
+
+    #photo-gallery-body i{
+        font-size: 2.6rem;
+        margin-top: 8rem;
+    }
+
+
+    #photo-gallery-img-1{
+        height: 11rem;
+        width: 9.5rem;
+    }
+    #photo-gallery-img-2{
+        height: 7rem;
+        width: 9.5rem;
+    }
+
+    #photo-gallery-img-3{
+        height: 7rem;
+        width: 13.5rem;
+    }
+    #photo-gallery-img-4{
+        height: 11rem;
+        width: 13.5rem;
+    }
+
+    #photo-gallery-img-5{
+        height: 12rem;
+        width: 16.2rem;
+    }
+    #photo-gallery-img-6{
+        width: 7rem;
+        height: 6rem;
+    }
+    #photo-gallery-img-7{
+        width: 9rem;
+        height: 6rem;
+    }
+
+
+    #photo-gallery-img-8{
+        height: 6rem;
+        width: 9.5rem;
+    }
+    #photo-gallery-img-9{
+        height: 6rem;
+        width: 11.5rem;
+    }
+    #photo-gallery-img-10{
+        height: 12rem;
+        width: 21.2rem;
+    }
+
+    #photo-gallery-img-11{
+        width: 14rem;
+        height: 10rem;
+    }
+    #photo-gallery-img-12{
+        width: 14em;
+        height: 8rem;
+    }
+
+    #photo-gallery-img-13{
+        width: 31rem;
+        height: 18.2rem;
+    }
+}
+@media only screen and (max-width:650px){
+
+
+    header{
+        padding: 1rem;
+    }
+    #header-dropdown-button{
+        display: block !important;
+    }
+    .top-bar{
+        flex-wrap: nowrap;
+    }
+    .logo-container{
+        justify-content: flex-start;
+        width: fit-content;
+        margin-right: 0rem;
+    }
+    .logo-container img{
+        width: 4.5rem;
+    }
+    .sub-header{
+        justify-content: flex-start;
+        margin-left: 1rem;
+        width: fit-content;
+    }
+    .sub-header img{
+        width: 7.6rem;
+    }
+    .nav{
+        display: none;
+    }
+    
+
+    .title-block{
+        font-size: 0.75rem;
+        padding: 1rem;
+        letter-spacing: 1px;
+        border-radius: 0 20px 0 20px;
+    }
+    #blog-month{
+        padding-top: 1.5rem;
+        margin-top: 2rem;
+    }
+    .blog-date-author{
+        margin: 0.5rem 0;
+        font-size: 0.45rem;
+    }
+    .blog-title{
+        font-size: 0.8rem;
+    }
+    .blog-desc{
+        font-size: 0.55rem;
+        margin-top: 0.4rem;
+        margin-bottom: 0.5rem;
+    }
+    .blog-foot p{
+        padding:0.35rem 2vw;
+        font-size: 0.5rem;
+    }
+
+    #picture-month{
+        margin: 2rem auto 0;
+        padding-top: 1.5rem;
+    }
+    #picture-month-body{
+        padding-top: 3rem;
+        padding-bottom: 1.25rem;
+    }
+    #picture-month-carousel-container i:nth-child(1){
+        font-size: 1.7rem;
+    }
+    #picture-month-carousel-container i:nth-child(2){
+        font-size: 1.7rem;
+    }
+    #picture-month-carousel img{
+        width: 50vw;
+        height: 11rem;
+    }
+    #picture-month-body p{
+        margin-top: 1.25rem;
+        font-size: 0.75rem;
+    }
+
+    #quote-month{
+        margin-top: 2rem;
+    }
+    #quote-month-header-bg{
+        padding: 0.6rem 0.6rem 0;
+    }
+    #quote-month-header-fg{
+        padding: 0.6rem;
+    }
+    #quote-month-header-fg p{
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+    }
+    #quote-month-body{
+        flex-wrap: wrap;
+    }
+    #quote-month-body div{
+        width: 50%;
+    }
+    #quote-month-body div i{
+        font-size: 1.5rem;
+        margin: 2rem 0;
+    }
+    .quote-card-title{
+        font-size: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+    .quote-card-desc{
+        font-size: 0.56rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #reach-us{
+        margin:1rem auto 1rem;
+    }
+    #reach-title p:first-child{
+        font-size: 1.2rem;
+    }
+    #reach-title p:last-child{
+        font-size: 0.6rem;
+    }
+    #reach-sub-title{
+        font-size: 1rem;
+        margin-top: 0.3rem;
+    }
+    #reach-body{
+        margin-top: 0.7rem;
+    }
+    #reach-body-desc{
+        font-size: 0.5rem;
+        margin-right: 4vw;
+        line-height: 15px;
+    }
+
+    #reach-form input{
+        border-width: 0.1rem;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.55rem;
+    }
+    #reach-form input:nth-child(2){
+        margin-top: 0.3rem;
+    }
+    #reach-form textarea{
+        margin-top: 0.3rem;
+        border-width: 0.1rem;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.55rem;
+        margin-bottom: 0.4rem;
+        height: 4rem;
+    }
+    #reach-form button{
+        padding: 0.3rem;
+        border-width: 1px;
+        font-size: 0.35rem;
+    }
+
+    #wrong-and-about{
+        flex-direction: column;
+    }
+
+    #about{
+        width: 100%;
+    }
+    #about-creator p:first-child{
+        margin: 0.85rem 0;
+        font-size: 1rem;
+    }
+    #about-creator img{
+        width: 60vw;
+        margin: 0;
+        margin-left: 19vw;
+    }
+    #about-creator p:last-child{
+        margin: 1rem 15vw;
+        line-height: 18px;
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+    }
+
+    #about-instagram p:nth-child(1){
+        margin-top: 0.3rem;
+        font-size: 1.1rem;
+    }
+    #about-instagram p:nth-child(2){
+        font-size: 0.75rem;
+        margin: 0.1rem;
+    }
+    #about-instagram p:nth-child(3){
+        margin: 0.4rem 12vw;
+        line-height: 18px;
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+    }
+    #about-instagram i{
+        font-size: 28px;
+    }
+    #about-instagram p:nth-child(5){
+        margin-bottom: 0.3rem;
+        font-size: 0.85rem;
+    }
+
+    #blog-week p:first-child{
+        font-size: 1.1rem;
+        margin: 0.4rem 0.4rem 0.8rem;
+    }
+    #blog-week img{
+        width: 60vw;
+        margin: 0;
+        margin-left: 19vw;
+    }
+    #blog-week p:last-of-type{
+        margin:0.4rem 12vw;
+        line-height: 18px;
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+    }
+    #blog-week div button{
+        padding:0.55rem 1rem;
+        margin: 0.5rem 0;
+        font-size: 0.7rem;
+    }
+
+    #book-month p:first-child{
+        font-size: 1.1rem;
+        margin: 0.4rem 0 0.8rem;
+    }
+    #book-month img{
+        width: 60vw;
+        margin: 0;
+        margin-left: 19vw;
+    }
+    #book-month p:last-of-type{
+        margin:0.4rem 5vw 0.6rem;
+        line-height: 18px;
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+    }
+    #blog-week div button{
+        padding:0.55rem 1rem;
+        margin: 0.5rem 0;
+        font-size: 0.7rem;
+    }
+
+    #written-wrong{
+        width: 100%;
+        border: none;
+    }
+    #written-wrong p:first-child{
+        margin-top: 1rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    .mini-blog img{
+        width: 120px;
+        height: 130px;
+    }
+    .mini-blog{
+        margin: 1rem auto;
+    }
+    .mini-blog div p:nth-child(1){
+        font-size: 0.45rem !important;
+        letter-spacing: normal !important;
+        margin: 0.4rem 0.75rem 0rem !important;
+        opacity: 0.7;
+    }
+    .mini-blog div p:nth-child(2){
+        margin: 0rem 0.75rem 0rem;
+        font-size: 0.4rem;
+    }
+    .mini-blog div p:nth-child(3){
+        margin: 0.1rem 0.75rem 0.2rem;
+        font-size: 0.75rem;
+    }
+    .mini-blog div p:nth-child(4){
+        margin: 0 0.75rem 0.6rem;
+        opacity: 0.85;
+        font-size: 0.55rem;
+    }
+    .mini-blog-body hr{
+        width: 40%;
+        bottom: 1.1rem;
+        margin:0 0.75rem;
+    }
+    .mini-blog div p:nth-child(6){
+        margin: 0.3rem 0.75rem;
+        font-size: 0.45rem;
+    }
+    #written-wrong button{
+        padding: 0.4rem 1rem;
+        border-radius: 30px;
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+
+    #photo-gallery{
+        margin: 1rem 0;
+    }
+    #photo-gallery p:nth-child(1){
+        font-size: 1.1rem;
+    }
+    #photo-gallery p:nth-child(2){
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+    }
+    #photo-gallery p:last-child{
+        margin: 1rem 15vw 0;
+        font-size: 0.75rem;
+    }
+
+    #photo-gallery-body i{
+        font-size: 2rem;
+        margin-top: 5.5rem;
+    }
+
+
+    #photo-gallery-img-1{
+        height: 7rem;
+        width: 7rem;
+    }
+    #photo-gallery-img-2{
+        height: 5rem;
+        width: 7rem;
+    }
+
+    #photo-gallery-img-3{
+        height: 5rem;
+        width: 10rem;
+    }
+    #photo-gallery-img-4{
+        height: 7rem;
+        width: 10rem;
+    }
+
+    #photo-gallery-img-5{
+        height: 8rem;
+        width: 12.2rem;
+    }
+    #photo-gallery-img-6{
+        width: 5rem;
+        height: 4rem;
+    }
+    #photo-gallery-img-7{
+        width: 7rem;
+        height: 4rem;
+    }
+
+
+    #photo-gallery-img-8{
+        height: 4rem;
+        width: 6rem;
+    }
+    #photo-gallery-img-9{
+        height: 4em;
+        width: 7rem;
+    }
+    #photo-gallery-img-10{
+        height: 8rem;
+        width: 13.2rem;
+    }
+
+    #photo-gallery-img-11{
+        width: 10rem;
+        height: 7rem;
+    }
+    #photo-gallery-img-12{
+        width: 10em;
+        height: 5rem;
+    }
+
+    #photo-gallery-img-13{
+        width: 18rem;
+        height: 12.2rem;
+    }
+}
+@media only screen and (max-width:420px){
+
+    #quote-month-header-fg p{
+        font-size: 0.7rem;
+    }
+    .quote-card-desc{
+        font-size: 0.52rem;
+        line-height: 1rem;
+    }
+
+    #picture-month-carousel img{
+        width: 50vw;
+        height: 8rem;
+    }
+
+    .mini-blog div p:nth-child(1){
+        font-size: 0.4rem !important;
+        letter-spacing: normal !important;
+        margin: 0.4rem 0.75rem 0rem !important;
+        opacity: 0.7;
+    }
+    .mini-blog div p:nth-child(2){
+        margin: 0rem 0.75rem 0rem;
+        font-size: 0.35rem;
+    }
+    .mini-blog div p:nth-child(3){
+        margin: 0.1rem 0.75rem 0.2rem;
+        font-size: 0.6rem;
+    }
+    .mini-blog div p:nth-child(4){
+        margin: 0 0.75rem 0.6rem;
+        opacity: 0.85;
+        font-size: 0.4rem;
+    }
+    .mini-blog-body hr{
+        width: 40%;
+        bottom: 1rem;
+        margin:0 0.75rem;
+    }
+    .mini-blog div p:nth-child(6){
+        margin: 0.3rem 0.75rem;
+        font-size: 0.4rem;
+    }
+}

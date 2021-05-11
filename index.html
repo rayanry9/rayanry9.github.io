@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WriteWrong-Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora">
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="top-bar">
+                <div class="logo-container">
+                    <img src="./img/logo.webp">
+                </div>
+                <div class="sub-header">
+                    <img src="./img/headerSubLogo.png">
+                </div>
+                <ul class="nav">
+                    <li><a class="nav-options" href="./">Home</a></li>
+                    <li><a class="nav-options" href="./blogs.html">Blogs</a></li>
+                    <li><a class="nav-options" href="./photo-booth.html">Photo Booth</a></li>
+                    <li><a class="nav-options" href="./hall-of-fame.html">Hall Of Fame</a></li>
+                </ul>
+                <div id="header-dropdown" style="position:relative;">
+                    <i id="header-dropdown-button" onclick="dropdownDisplay(document.getElementById('header-dropdown-body'))" class="material-icons" style="display: none;">view_headline</i>
+                    <div id="header-dropdown-body">
+                        <p><a href="./">Home</a></p>
+                        <p><a href="./blogs.html">Blogs</a></p>
+                        <p><a href="./photo-booth.html">Photo Booth</a></p>
+                        <p><a href="./hall-of-fame.html">Hall of Fame</a></p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="blog-month">
+            <div class="title-block">
+                <p>Blog of the Month</p>
+            </div>
+            <div class="blog-post">
+                <img id="blog-month-thumbnail" src="./img/placeholder.jpg" width="100%"">
+                <div class="blog-date-author">
+                    <p id="month-blog-author"></p>
+                    <p id="month-blog-date"></p>
+                </div>
+                <div class="blog-title">
+                    <p id="month-blog-title"></p>
+                </div>
+                <div class="blog-desc">
+                    <p id="month-blog-desc"></p>
+                </div>
+                <div class="blog-foot">
+                    <hr style="width: 95%;margin:0 auto;">
+                    <p>1 view</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="picture-month">
+            <div class="title-block">
+                <p>Pictures of the Month</p>
+            </div>
+            <div id="picture-month-body">
+                <div id="picture-month-carousel-container">
+                    <i id="picture-month-carousel-left" onclick="carouselLeft()" class="material-icons">keyboard_arrow_left</i>
+                    <i id="picture-month-carousel-right" onclick="carouselRight()" class="material-icons">keyboard_arrow_right</i>
+                    <div id="picture-month-carousel">
+                    </div>
+                </div>
+                <p>Picture By Blah blah blah</p>
+            </div>
+        </section>
+
+        <section id="quote-month">
+            <div id="quote-month-header-bg">
+                <div id="quote-month-header-fg">
+                    <p>Quotes of the Month</p>
+                </div>
+            </div>
+            <div id="quote-month-body" >
+                <div style="background-color: black;">
+                    <i class="material-icons" style="color: white;">lightbulb</i>
+                    <p class="quote-card-title" style="color: white;">BRANDING</p>
+                    <p id="quote-month-branding" class="quote-card-desc" style="color: white;"></p>
+                </div>
+                <div style="background-color: grey;">
+                    <i class="material-icons" style="color: white;">record_voice_over</i>
+                    <p class="quote-card-title" style="color: rgb(255,130,130);">STORYTELLING</p>
+                    <p id="quote-month-storytelling" class="quote-card-desc" style="color: white;"></p>
+                </div>
+                <div style="background-color: rgb(230, 230, 230);">
+                    <i class="fa fa-pencil" style="color: black;"></i>
+                    <p class="quote-card-title" style="color: rgb(255,130,130);">DESIGN</p>
+                    <p id="quote-month-design" class="quote-card-desc" style="color: black;"></p>
+                </div>
+                <div style="background-color: rgb(255,130,130);">
+                    <i class="material-icons" style="color: black;">chat_bubble_outline</i>
+                    <p class="quote-card-title" style="color: white;">CONSULTING</p>
+                    <p id="quote-month-consulting" class="quote-card-desc" style="color: black;"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reach-us">
+            <div id="reach-title">
+                <p>Like What You See?</p>
+                <p>Want People to See Your Contributions Too?</p>
+            </div>
+            <p id="reach-sub-title">Show us What you Got!</p>
+            <div id="reach-body">
+                <div id="reach-body-desc">
+                    <p>Write down your story and copy and paste it in the box here! Also, put in your name and email address in the boxes above so that we can contact you with our response and put your name beside your article. If however, you decide to not put your name up, just write anonymous. We respect your privacy.</p>
+                </div>
+                <div id="reach-form">
+                    <input id="reach-us-name" placeholder="Your Name">
+                    <input id="reach-us-email" placeholder="Your Email address">
+                    <textarea id="reach-us-story" placeholder="Write Your Story Here:)"></textarea>
+                    <button onclick="sendEmail()">Send To The World!</button>
+                </div>
+            </div>
+        </section>
+
+        <!--WrittenWrong and About-->
+        <section id="wrong-and-about" >
+            <section id="written-wrong">
+                <p>WrittenWrong (The Blogs)</p>
+                <div class="mini-blog">
+                    <img id="mini-blog-1" src="./img/placeholder.jpg">
+                    <div class="mini-blog-body">
+                        <p>Author</p>
+                        <p>6 days ago</p>
+                        <p>Top 5 Items Under 20$ I can't Live Without</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <hr>
+                        <p>1 view</p>
+                    </div>
+                </div>
+                <div class="mini-blog">
+                    <img id="mini-blog-2" src="./img/placeholder.jpg">
+                    <div class="mini-blog-body">
+                        <p>Author</p>
+                        <p>6 days ago</p>
+                        <p>Top 5 Items Under 20$ I can't Live Without</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <hr>
+                        <p>1 view</p>
+                    </div>
+                </div>
+                <div class="mini-blog">
+                    <img id="mini-blog-3" src="./img/placeholder.jpg">
+                    <div class="mini-blog-body">
+                        <p>Author</p>
+                        <p>6 days ago</p>
+                        <p>Top 5 Items Under 20$ I can't Live Without</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <hr>
+                        <p>1 view</p>
+                    </div>
+                </div>
+                <div class="mini-blog">
+                    <img id="mini-blog-4" src="./img/placeholder.jpg">
+                    <div class="mini-blog-body">
+                        <p>Author</p>
+                        <p>6 days ago</p>
+                        <p>Top 5 Items Under 20$ I can't Live Without</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <hr>
+                        <p>1 view</p>
+                    </div>
+                </div>
+                <div class="mini-blog">
+                    <img id="mini-blog-5" src="./img/placeholder.jpg">
+                    <div class="mini-blog-body">
+                        <p>Author</p>
+                        <p>6 days ago</p>
+                        <p>Top 5 Items Under 20$ I can't Live Without</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <hr>
+                        <p>1 view</p>
+                    </div>
+                </div>
+                <div class="mini-blog">
+                    <img id="mini-blog-6" src="./img/placeholder.jpg">
+                    <div class="mini-blog-body">
+                        <p>Author</p>
+                        <p>6 days ago</p>
+                        <p>Top 5 Items Under 20$ I can't Live Without</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <hr>
+                        <p>1 view</p>
+                    </div>
+                </div>
+                <button>More Posts</button>
+            </section>
+            <section id="about">
+                <div id="about-creator">
+                    <p>About The Creator</p>
+                    <img src="img/creator.png">
+                    <p>Hi! Im Riddhiman. I'm a high schooler in Kolkata, a city on the eastern side of India. I really like the internet, writing and photography. So as you can imagine, I put this website together to find more people who share at least one of these interests. If you're reading this, Welcome to WriteWrong. You've come to the "Write" place. feel free to follow me here Cheerio!</p>
+                </div>
+                <hr style="margin:0.4rem auto; width:70%;">
+                <div id="about-instagram">
+                    <p>WriteWrong on Instagram</p>
+                    <p>WriteWrong in Your Pocket</p>
+                    <p>Wanna sneak a peek at what's going on at WriteWrong without spiralling down this beautiful tunnel? We have a solution for that! Follow our Instagram Page linked below to get Short stories, little snippets of the blog of the Week and blog of the Month. People submitting pictures can also find their entries on @writewrongindia (yes. Pictures. We'll get to that in a sec). If you submitted an exceptional story that people thoroughly enjoyed, you would get a shoutout on the instagram page with a nifty little certificate and a shoutout! Pretty cool, right? So what are you waiting for? Go ahead and follow us and enter the World of WriteWrong whenever you want, right on your phone!</p>
+                    <a href="https://www.instagram.com/writewrongindia/"><i class="fa fa-instagram"></i></a>
+                    <p>WriteWrong On Instagram</p>
+                </div>
+                <hr style="margin:0.4rem auto; width:70%;">
+                <div id="blog-week">
+                    <p>Blog of the Week</p>
+                    <img id="blog-week-img" src="./img/placeholder.jpg">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat pellentesque adipiscing commodo elit. Lacus vestibulum sed arcu non odio euismod lacinia.</p>
+                    <div style="width: 100%; text-align: center;">
+                        <button>Read More></button>
+                    </div>
+                </div>
+                <hr style="margin:0.4rem auto; width:70%;">
+                <div id="book-month">
+                    <p>Book of the Month</p>
+                    <img id="book-month-img" src="./img/placeholder.jpg">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat pellentesque adipiscing commodo elit. Lacus vestibulum sed arcu non odio euismod lacinia.</p>
+                    <div style="width: 100%; text-align: center;">
+                        <button>Read More></button>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <section id="photo-gallery">
+            <P>Writing not Your Cup o' Tea?</P>
+            <p>We Got You!</p>
+            <div id="photo-gallery-body">
+                <i id="photo-gallery-left" onclick="pictureGalleryLeft()" class="material-icons">keyboard_arrow_left</i>
+                <i id="photo-gallery-right" onclick="pictureGalleryRight()" class="material-icons">keyboard_arrow_right</i>
+                <div id="photo-gallery-carousel">
+                    <div class="photo-gallery-column" id="photo-gallery-col-1">
+                        <img id="photo-gallery-img-1" src="./img/placeholder.jpg">
+                        <img id="photo-gallery-img-2" src="./img/placeholder.jpg">
+                    </div>
+                    <div class="photo-gallery-column" id="photo-gallery-col-2">
+                        <img id="photo-gallery-img-3" src="./img/placeholder.jpg">
+                        <img id="photo-gallery-img-4" src="./img/placeholder.jpg">
+                    </div>
+                    <div class="photo-gallery-column" id="photo-gallery-col-3">
+                        <img id="photo-gallery-img-5" src="./img/placeholder.jpg">
+                        <div style="display: flex; flex-direction: row;">
+                            <img id="photo-gallery-img-6" src="./img/placeholder.jpg">
+                            <img id="photo-gallery-img-7" src="./img/placeholder.jpg">
+                        </div>
+                    </div>
+                    <div class="photo-gallery-column" id="photo-gallery-col-4">
+                        <div style="display: flex; flex-direction: row;">
+                            <img id="photo-gallery-img-8" src="./img/placeholder.jpg">
+                            <img id="photo-gallery-img-9" src="./img/placeholder.jpg">
+                        </div>
+                        <img id="photo-gallery-img-10" src="./img/placeholder.jpg">
+                    </div>
+                    <div class="photo-gallery-column" id="photo-gallery-col-5">
+                        <img id="photo-gallery-img-11" src="./img/placeholder.jpg">
+                        <img id="photo-gallery-img-12" src="./img/placeholder.jpg">
+                    </div>
+                    <div class="photo-gallery-column" id="photo-gallery-col-6">
+                        <img id="photo-gallery-img-13" src="./img/placeholder.jpg">
+                    </div>
+                </div>
+            </div>
+            <p>Get your Pictures published on WriteWrong and WriteWrong Instagram and get a chance to become Photographer of the month</p>
+        </section>
+
+        <footer style="background-color: rgb(255,130,130);height: 10vw;">
+            
+        </footer>
+
+        <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyBzx0DHdS4hfQxKFXhwgM4Y1PP0Qs_-79w",
+                authDomain: "writewrong-31c40.firebaseapp.com",
+                databaseURL: "https://writewrong-31c40-default-rtdb.firebaseio.com",
+                projectId: "writewrong-31c40",
+                storageBucket: "writewrong-31c40.appspot.com",
+                messagingSenderId: "172316949874",
+                appId: "1:172316949874:web:b110121c75de0ec77c71eb",
+                measurementId: "G-LXX21Q8Z37"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="./js/fb-index.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
