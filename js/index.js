@@ -100,7 +100,7 @@ async function dataLoad(){
         document.getElementById("picture-month-carousel").appendChild(img);
     }
     for(var i=1;i<=6;i++){
-        document.getElementById("mini-blog-"+i).setAttribute("src","/img/mini-blog/"+i+".jpeg");
+        document.getElementById("mini-blog-"+i).setAttribute("src","./img/mini-blog/"+i+".jpeg");
     }
     document.getElementById("blog-week-img").setAttribute("src",data.images.blogWeek);
     document.getElementById("book-month-img").setAttribute('src',data.images.bookMonth);

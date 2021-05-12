@@ -58,12 +58,12 @@
         "description":""
     },
     "images":{
-        "blogMonth":"/img/blog-month-thumbnail.png",
+        "blogMonth":"./img/blog-month-thumbnail.png",
         "pictureMonth":[
             3,
-            "/img/carousel/"
+            "./img/carousel/"
         ],
-        "blogWeek":"/img/blog-week.jpeg",
-        "bookMonth":"/img/book-month.jpeg"
+        "blogWeek":"./img/blog-week.jpeg",
+        "bookMonth":"./img/book-month.jpeg"
     }
 }
