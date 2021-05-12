@@ -56,5 +56,14 @@
     "bookMonth":{
         "title":"",
         "description":""
+    },
+    "images":{
+        "blogMonth":"/img/blog-month-thumbnail.png",
+        "pictureMonth":[
+            3,
+            "/img/carousel/"
+        ],
+        "blogWeek":"/img/blog-week.jpeg",
+        "bookMonth":"/img/book-month.jpeg"
     }
 }
