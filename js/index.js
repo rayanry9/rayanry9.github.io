@@ -77,7 +77,7 @@ function pictureGalleryRight(){
 
 async function dataLoad(){
     var data;
-    await fetch("./data/index.json").then(response => response.json())
+    await fetch("/data/index.json").then(response => response.json())
     .then(json=>data=json);
 
     //Blog Month Data Load
@@ -92,8 +92,20 @@ async function dataLoad(){
     document.getElementById("quote-month-design").innerHTML=data.quoteMonth.design;
     document.getElementById("quote-month-consulting").innerHTML=data.quoteMonth.consulting;
 
-
+    //Loading Images
+    document.getElementById("blog-month-thumbnail").setAttribute("src",data.images.blogMonth);
+    for(var i=1;i<=data.images.pictureMonth[0];i++){
+        var img=document.createElement("img");
+        img.setAttribute("src",data.images.pictureMonth[1]+i+".jpeg");
+        document.getElementById("picture-month-carousel").appendChild(img);
+    }
+    for(var i=1;i<=6;i++){
+        document.getElementById("mini-blog-"+i).setAttribute("src","/img/mini-blog/"+i+".jpeg");
+    }
+    document.getElementById("blog-week-img").setAttribute("src",data.images.blogWeek);
+    document.getElementById("book-month-img").setAttribute('src',data.images.bookMonth);
 }
+
 function getBlogDate(epoch){
     var now=Math.floor(Date.now()/1000);
     var diff=now-epoch;
