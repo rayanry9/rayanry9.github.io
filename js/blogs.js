@@ -7,13 +7,14 @@ var totalStoryBlogs=0;
 var totalPoemBlogs=0;
 var pagination=document.getElementById("pagination");
 
+
 async function dataLoad(){
     var data;
-    await fetch("./data/blogs.json").then(response => response.json())
+    await fetch("/data/blogs.json").then(response => response.json())
     .then(json=>data=json);
     blogData=data;
-    totalStoryBlogs=data[CATEGORY_STORY].length;
-    totalPoemBlogs=data[CATEGORY_POEM].length;
+    totalStoryBlogs=Object.keys(data[CATEGORY_STORY]).length;
+    totalPoemBlogs=Object.keys(data[CATEGORY_POEM]).length;
     for(var i=1;i<=(totalStoryBlogs/10)+1;i++){
         var p=document.createElement("p");
         p.appendChild(document.createTextNode(i));
@@ -137,11 +138,11 @@ function pageDataChange(category){
 
     for(var i=0;i<blogCount;i++){
         miniBlog[i].style.display="block";
-        miniBlog[i].children[1].innerHTML=blogData[category][i].author;
-        miniBlog[i].children[2].innerHTML=getBlogDate(blogData[category][i].epoch);
-        miniBlog[i].children[3].innerHTML=blogData[category][i].title;
-        miniBlog[i].children[4].innerHTML=blogData[category][i].description;
-        miniBlog[i].setAttribute("onclick","goToBlog(\""+blogData[category][i].href+"\")");
+        miniBlog[i].children[1].innerHTML=blogData[category][Object.keys(blogData[category])[i]].author;
+        miniBlog[i].children[2].innerHTML=getBlogDate(blogData[category][Object.keys(blogData[category])[i]].epoch);
+        miniBlog[i].children[3].innerHTML=blogData[category][Object.keys(blogData[category])[i]].title;
+        miniBlog[i].children[4].innerHTML=blogData[category][Object.keys(blogData[category])[i]].description;
+        miniBlog[i].setAttribute("onclick","goToBlog(\""+blogData[category][Object.keys(blogData[category])[i]].href+"\")");
     }
 
 }
@@ -169,3 +170,23 @@ function getBlogDate(epoch){
     }
     return out;
 }
+
+var subheadingImg=document.getElementById("sub-heading-img");
+var imgOffsetY=-subheadingImg.getBoundingClientRect().height*0.2;
+var scrollValY=window.scrollY;
+window.onscroll=(e)=>{
+    if(window.scrollY>scrollValY){
+        imgOffsetY=-(subheadingImg.getBoundingClientRect().height*0.2/document.body.offsetHeight)
+            *scrollY;
+        subheadingImg.style.transform="scaleY(1.4) translateY("+imgOffsetY+"px)";
+        scrollValY=window.scrollY;
+    }
+    else{
+        imgOffsetY=-(subheadingImg.getBoundingClientRect().height*0.2/document.body.offsetHeight)
+            *scrollY;
+        subheadingImg.style.transform="scaleY(1.4) translateY("+imgOffsetY+"px)";
+        scrollValY=window.scrollY;
+    }
+    
+}
+

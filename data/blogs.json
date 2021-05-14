@@ -1,20 +1,20 @@
 {
-    "stories":[
-        {
+    "stories":{
+        "1620561235":{
             "author":"Rubai Boi",
             "title":"Does The Rainbow ever have tears in its eyes?",
             "epoch":1620561235,
             "description":"Life is meaningless just die",
             "href":"does-the-rainbow-ever-have-tears-in-its-eyes.html"
         }
-    ],
-    "poems":[
-        {
+    },
+    "poems":{
+        "1620561236":{
             "author":"Rubai Boi",
             "title":"Does The Rainbow ever have tears in its eyes?",
             "epoch":1620561236,
             "description":"Life is meaningless just die",
             "href":"does-the-rainbow-ever-have-tears-in-its-eyes.html"
         }
-    ]
+    }
 }

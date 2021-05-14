@@ -1,10 +1,22 @@
 {
     "blogMonth":{
-        "title":"Back To Fiction: What I'm Reading this summer",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus sit amet volutpat consequat mauris nunc congue.",
-        "epoch":1616234354,
-        "author":"Alex Boi"
+        "id":1620561236,
+        "category":"poems"
     },
+    "pictureMonth":[
+        {
+            "href":"/img/carousel/1.jpeg",
+            "photographer":"Trina"
+        },
+        {
+            "href":"/img/carousel/2.jpeg",
+            "photographer":"Raki"
+        },
+        {
+            "href":"/img/carousel/3.jpeg",
+            "photographer":"Saki"
+        }
+    ],
     "quoteMonth":{
         "branding":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "storytelling":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -12,42 +24,12 @@
         "consulting":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     "writtenWrong":{
-        "miniBlog1":{
-            "title":"",
-            "description":"",
-            "epoch":1620397901,
-            "author":""
-        },
-        "miniBlog2":{
-            "title":"",
-            "description":"",
-            "epoch":1620397901,
-            "author":""
-        },
-        "miniBlog3":{
-            "title":"",
-            "description":"",
-            "epoch":1620397901,
-            "author":""
-        },
-        "miniBlog4":{
-            "title":"",
-            "description":"",
-            "epoch":1620397901,
-            "author":""
-        },
-        "miniBlog5":{
-            "title":"",
-            "description":"",
-            "epoch":1620397901,
-            "author":""
-        },
-        "miniBlog6":{
-            "title":"",
-            "description":"",
-            "epoch":1620397901,
-            "author":""
-        }
+        "miniBlog1":1620397901,
+        "miniBlog2":1620397901,
+        "miniBlog3":1620397901,
+        "miniBlog4":1620397901,
+        "miniBlog5":1620397901,
+        "miniBlog6":1620397901
     },
     "blogWeek":{
         "title":"",
@@ -59,10 +41,6 @@
     },
     "images":{
         "blogMonth":"./img/blog-month-thumbnail.png",
-        "pictureMonth":[
-            3,
-            "./img/carousel/"
-        ],
         "blogWeek":"./img/blog-week.jpeg",
         "bookMonth":"./img/book-month.jpeg"
     }

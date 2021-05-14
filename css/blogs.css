@@ -132,7 +132,10 @@ header{
 #sub-heading img{
     width: 60vw;
     height: 45rem;
-    transform: scaleY(1.5);
+    object-fit: cover;
+    transform: scaleY(1.4);
+    transition-property: all;
+    transition-duration: 100ms;
 }
 
 #posts{

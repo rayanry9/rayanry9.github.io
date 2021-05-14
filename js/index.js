@@ -1,3 +1,6 @@
+var data;
+var blogData;
+
 emailjs.init("user_dhNjUOCN0YAiEWBUAqzph");
 
 function dropdownDisplay(id){
@@ -16,6 +19,7 @@ function carouselLeft(){
         var width=carousel.clientWidth;
         carousel.style.transform="translateX(-"+(width*(carouselCounter-1))+"px)";
         carouselCounter--;
+        document.getElementById("picture-month-photographer").innerHTML="Picture By "+data.pictureMonth[carouselCounter].photographer;
     }
 }
 function carouselRight(){
@@ -23,6 +27,7 @@ function carouselRight(){
         var width=carousel.clientWidth;
         carousel.style.transform="translateX(-"+(width*(carouselCounter+1))+"px)";
         carouselCounter++;
+        document.getElementById("picture-month-photographer").innerHTML="Picture By "+data.pictureMonth[carouselCounter].photographer;
     }
 }
 function sendEmail(){
@@ -76,15 +81,22 @@ function pictureGalleryRight(){
 
 
 async function dataLoad(){
-    var data;
     await fetch("/data/index.json").then(response => response.json())
     .then(json=>data=json);
-
+    await fetch("/data/blogs.json").then(response=>response.json()).then(json=>blogData=json);
     //Blog Month Data Load
-    document.getElementById("month-blog-author").innerHTML=data.blogMonth.author;
-    document.getElementById("month-blog-date").innerHTML=getBlogDate(data.blogMonth.epoch);
-    document.getElementById("month-blog-title").innerHTML=data.blogMonth.title;
-    document.getElementById("month-blog-desc").innerHTML=data.blogMonth.description;
+    document.getElementById("month-blog-author").innerHTML=blogData[data.blogMonth.category][data.blogMonth.id].author;
+    document.getElementById("month-blog-date").innerHTML=getBlogDate(blogData[data.blogMonth.category][data.blogMonth.id].epoch);
+    document.getElementById("month-blog-title").innerHTML=blogData[data.blogMonth.category][data.blogMonth.id].title;
+    document.getElementById("month-blog-desc").innerHTML=blogData[data.blogMonth.category][data.blogMonth.id].description;
+
+    //Picture Month Data Load
+    for(var i=0;i<data.pictureMonth.length;i++){
+        var img=document.createElement("img");
+        img.setAttribute("src",data.pictureMonth[i].href);
+        document.getElementById("picture-month-carousel").appendChild(img);
+    }
+    document.getElementById("picture-month-photographer").innerHTML="Picture By "+data.pictureMonth[0].photographer;
 
     //Quote Month Data Load
     document.getElementById("quote-month-branding").innerHTML=data.quoteMonth.branding;
@@ -94,11 +106,6 @@ async function dataLoad(){
 
     //Loading Images
     document.getElementById("blog-month-thumbnail").setAttribute("src",data.images.blogMonth);
-    for(var i=1;i<=data.images.pictureMonth[0];i++){
-        var img=document.createElement("img");
-        img.setAttribute("src",data.images.pictureMonth[1]+i+".jpeg");
-        document.getElementById("picture-month-carousel").appendChild(img);
-    }
     for(var i=1;i<=6;i++){
         document.getElementById("mini-blog-"+i).setAttribute("src","/img/mini-blog/"+i+".jpeg");
     }
