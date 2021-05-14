@@ -2,6 +2,8 @@ var data;
 var blogData;
 
 emailjs.init("user_dhNjUOCN0YAiEWBUAqzph");
+document.getElementsByClassName("nav-options")[0].style="background-color: rgb(253, 75, 75);color: white;border-color:transparent;";
+
 
 function dropdownDisplay(id){
     if(id.style.display!="flex"){
@@ -89,6 +91,7 @@ async function dataLoad(){
     document.getElementById("month-blog-date").innerHTML=getBlogDate(blogData[data.blogMonth.category][data.blogMonth.id].epoch);
     document.getElementById("month-blog-title").innerHTML=blogData[data.blogMonth.category][data.blogMonth.id].title;
     document.getElementById("month-blog-desc").innerHTML=blogData[data.blogMonth.category][data.blogMonth.id].description;
+    document.getElementById("blog-month").setAttribute("onclick","goToBlog(\""+blogData[data.blogMonth.category][data.blogMonth.id].href+"\")");
 
     //Picture Month Data Load
     for(var i=0;i<data.pictureMonth.length;i++){
@@ -131,5 +134,8 @@ function getBlogDate(epoch){
         out=date.getDate()+"/"+(date.getMonth()+1);
     }
     return out;
+}
+function goToBlog(href){
+    location.assign(location.origin+"/blogs/"+href);
 }
 dataLoad();
