@@ -7,6 +7,7 @@ var totalStoryBlogs=0;
 var totalPoemBlogs=0;
 var pagination=document.getElementById("pagination");
 
+document.getElementsByClassName("nav-options")[1].style="background-color: rgb(253, 75, 75);color: white;border-color:transparent;";
 
 async function dataLoad(){
     var data;

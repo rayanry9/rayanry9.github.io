@@ -1,3 +1,5 @@
+document.getElementsByClassName("nav-options")[3].style="background-color: rgb(253, 75, 75);color: white;border-color:transparent;";
+
 function dropdownDisplay(id){
     if(id.style.display!="flex"){
         id.style.display="flex";

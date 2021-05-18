@@ -95,11 +95,6 @@ header{
 .nav-options:hover{
     border-color: black;
 }
-.nav-options:active{
-    background-color: rgb(253, 105, 105);
-    color: white;
-    border-color:transparent;
-}
 
 
 #blog-month{
@@ -131,6 +126,7 @@ header{
     border-style: solid;
     border-width: thin;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .blog-date-author{
@@ -177,7 +173,7 @@ header{
     position: relative;
     margin:0 auto;
     overflow-x: hidden;
-    width: 40vw;
+    width: 55vw;
 }
 #picture-month-carousel-container i:nth-child(1){
     position: absolute;
@@ -210,8 +206,8 @@ header{
 }
 #picture-month-carousel img{
     flex-shrink: 0;
-    width: 40vw;
-    height: 23rem;
+    width: 55vw;
+    height: 27rem;
     object-fit: cover;
 }
 #picture-month-body p{
@@ -276,7 +272,7 @@ header{
 
 #reach-us{
     width: 80%;
-    margin:3rem auto 2rem;
+    margin:5rem auto 3rem;
 }
 #reach-title p{
     font-family: 'Ubuntu',sans-serif;
@@ -504,6 +500,12 @@ header{
     margin: 3rem auto 1rem;
     width: 80%;
     border: 1px solid black;
+    cursor: pointer;
+    transition: all 250ms linear 100ms;
+}
+.mini-blog:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .mini-blog img{
